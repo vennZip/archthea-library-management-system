@@ -18,7 +18,7 @@ All circulation operations acquire a transaction-level circulation advisory lock
 
 ## OOP
 
-Repositories define a small data-access contract; SupabaseRepository implements it. Services receive repositories through dependency injection and encapsulate dependencies with private fields. Application errors extend AppError and override public error metadata. The centralized handler consumes the common contract. Composition is used for business capabilities.
+BaseRepository defines a small data-access contract; LibraryRepository implements it and inherits shared query execution. Services receive repositories through dependency injection and encapsulate dependencies with private fields. Application errors extend AppError; ValidationError and ConfigurationError override the publicBody getter. The centralized handler consumes the common contract. Composition is used for business capabilities. See the [UML class diagram](class-diagram.md) for class members, visibility and relationships corresponding to the implementation.
 
 ## Delivery gates
 

@@ -1,105 +1,43 @@
-# Archthea Library Management System
+# Archthea
 
-A React + Vite frontend, an independent Express API, and Supabase Authentication, PostgreSQL and private Storage. Includes student and librarian workspaces, physical-copy inventory, transactional loans, FIFO reservations, notifications, reporting, configurable policies and audit logs.
+### A place for curious minds.
 
-The application has **no mock-data fallback or authentication bypass**. Without Supabase configuration, the public site works and sign-in displays a connection notice. Browser test fixtures are isolated under `tests/e2e/`.
+Archthea is a library management platform that brings discovery, borrowing, reservations, and collection management into one connected workspace.
 
-## Start locally
+[Live platform](https://archthea-library.onrender.com/)
 
-Use Node.js 26, or a supported Node.js version matching the root package's engine requirement. Chrome is used for local browser tests; Edge is also supported.
+![Archthea's light blue interface](docs/assets/archthea-preview.png)
 
-```powershell
-npm.cmd ci
-# First setup only; keep existing .env files if you have already configured them.
-Copy-Item backend/.env.example backend/.env
-Copy-Item frontend/.env.example frontend/.env
-```
+## The library, connected
 
-Enter these values locally. **Do not paste secret keys into chat or commit them.**
+- **Discover the collection.** Search by title, author, or ISBN, with category and availability filters and detailed book information.
+- **Keep circulation moving.** Manage individual copies, borrowing eligibility, due dates, returns, and transaction history.
+- **Make reservations fair.** First-come, first-served queues coordinate pickup allocations, collection deadlines, and expiration.
+- **Give each role a clear workspace.** Students track their reading activity while librarians manage inventory, accounts, policies, and reports.
+- **Stay informed.** In-app notifications surface due dates and pickup updates, with administrative activity recorded in audit logs.
+- **Understand library activity.** Borrowing trends, popular titles, category insights, and exportable reports support daily decisions.
 
-| File            | Values                                                                  |
-| --------------- | ----------------------------------------------------------------------- |
-| `frontend/.env` | `VITE_SUPABASE_URL`, `VITE_SUPABASE_PUBLISHABLE_KEY`                    |
-| `backend/.env`  | `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY`, `SUPABASE_SERVICE_ROLE_KEY` |
+## Built with JavaScript
 
-The project URL and publishable key must refer to the same Supabase project in both files. The backend service-role key must stay exclusively on the server. Legacy Supabase anon keys can be used in the publishable-key fields.
+| Layer                  | Technology                                           |
+| ---------------------- | ---------------------------------------------------- |
+| Interface              | React, Vite, React Router, CSS, Lucide               |
+| Motion                 | GSAP, ScrollTrigger, Framer Motion                   |
+| API                    | Node.js, Express, Zod                                |
+| Data and identity      | Supabase PostgreSQL, Authentication, private Storage |
+| Hosting and scheduling | Render, Supabase Cron                                |
 
-### Set up Supabase
+The React frontend communicates with a layered REST API. Express verifies authentication and role permissions, while PostgreSQL functions coordinate transactional inventory changes and reservation queues. Row Level Security, server-side validation, private file storage, and request-level authorization protect application data.
 
-1. Use a fresh Supabase project, or inspect an existing project before applying the application schema.
-2. Run the SQL migrations in `supabase/migrations/` **in filename order** through the Supabase SQL editor. Alternatively run `npm.cmd run db:bundle` and execute `supabase/setup.sql` once in a fresh project. The migrations create application tables, RLS, transactional RPCs and a private `book-covers` bucket. Do not run the bundle again after applying the individual migrations.
-3. In **Authentication → URL Configuration**, set the Site URL to `http://127.0.0.1:5173`. Allow `http://127.0.0.1:5173/reset-password` and `http://127.0.0.1:5173/auth/callback`. Add the corresponding `localhost` URLs if you use that hostname.
-4. Disable public user signup and set the minimum password length to 12 characters. Students are registered by librarians through the API. Configure a working email sender; use custom SMTP for deployment.
-5. Create the first librarian:
+## Designed for everyday reading
 
-```powershell
-npm.cmd run bootstrap:admin -- --email librarian@example.edu --name "Library Administrator" --staff LIB-001
-```
+Soft blue surfaces, white cards, and navy typography create a calm interface across desktop, tablet, and mobile. Keyboard navigation, clear feedback, accessible contrast, and reduced-motion support carry through both workspaces.
 
-The script creates a new Auth identity and a librarian profile atomically at the application level, then sends a password setup email. It refuses to run once a librarian exists. The profile transaction is atomic; Auth identity creation is an external operation with compensation on database failure. No password is printed, generated or stored by the application. If email delivery fails after registration, use **Forgot password**.
+## Project reference
 
-For a local development account with a test email address, `node backend/scripts/local-admin-access.js --email your-test-address` can set a strong generated password for the sole existing librarian and confirm that test identity without email. It refuses production mode, verifies the email, saves credentials only in ignored `backend/.env.local-admin`, and never overwrites an existing credential file. This is a development helper, not a public application endpoint. Open that file locally to sign in, then use **My account → Change my password**. Production account registration and password recovery still require a working email sender.
-
-6. Start the two applications:
-
-```powershell
-npm.cmd run dev
-```
-
-After configuring Supabase and applying the schema, run `npm.cmd run verify:connection` to check database/schema access, Auth administration, the private cover bucket and anonymous access restrictions without printing credentials or user data. This diagnostic does not replace the complete live acceptance checklist in the deployment guide.
-
-- Frontend: **http://127.0.0.1:5173**
-- API health: **http://127.0.0.1:4000/api/v1/health**
-
-Restart the API after changing backend environment variables. Vite restarts for frontend environment changes. Login as the librarian, add categories/authors through **Catalog details**, add books and physical copies, then register students. No initial catalog or student records are fabricated.
-
-For Linux/macOS, use `npm` instead of `npm.cmd`. The Supabase CLI configuration is included for developers who have Docker and prefer `supabase start` and migration-based local development.
-
-## Features
-
-| Student workspace                                                                 | Librarian workspace                                                                       |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Dashboard with current loans, due dates and waiting positions                     | Operational dashboard, overdue list, trends and activity                                  |
-| Search title, author or ISBN; filter category, availability and publication years | Add/edit/archive/restore books; manage authors, publishers and categories                 |
-| Borrow available copies and collect ready reservations                            | Register students, edit enrollment information, activate/deactivate and restrict accounts |
-| Reserve unavailable titles and cancel reservations                                | Manage barcodes, copy conditions, damage, loss, maintenance and retirement                |
-| Borrowing history and permitted profile edits                                     | Process checkouts and returns; manage reservations and pickup holds                       |
-| In-app confirmations, due reminders and pickup alerts                             | Configure borrowing rules; view audit logs; export CSV and print/save reports as PDF      |
-
-Both workspaces support keyboard navigation, focus-trapped dialogs, responsive navigation, loading and error feedback, and reduced motion. GSAP/ScrollTrigger animates the landing page; Framer Motion handles application transitions and dialogs.
-
-## Verification
-
-```powershell
-npm.cmd test
-npm.cmd run build
-npm.cmd run test:e2e
-```
-
-- Vitest, Supertest and React Testing Library cover SQL rules, RLS, service behavior, HTTP authorization, rollback, uploads, notifications, focus handling and retry safety.
-- SQL tests execute the migrations and PL/pgSQL functions in **PGlite**, a real embedded PostgreSQL engine. Auth and Storage system tables are minimal test scaffolding; this does not verify the hosted Supabase Auth or Storage services.
-- Playwright exercises desktop, tablet and mobile using isolated network/Auth fixtures. It covers checkout, cancellation, returns, inventory, registration, policy edits, reports, API failures and accessibility. These tests do not replace live integration testing.
-- Test screenshots are saved under `.tmp/qa/`; failure traces are under `test-results/`. These directories are ignored.
-- For Edge: set `$env:PLAYWRIGHT_CHANNEL='msedge'` before browser tests. Linux CI installs Playwright Chromium automatically.
-
-### Real concurrent transactions
-
-Copy `backend/.env.concurrency.example` to `backend/.env.concurrency` and configure a **dedicated Supabase test project with the migrations applied**, then explicitly set `CONFIRM_DEDICATED_TEST_PROJECT=yes` in that file.
-
-```powershell
-npm.cmd run test:concurrency
-```
-
-This verifies competing borrowers for one copy, concurrent requests against a student's borrowing limit, and duplicate reservations. It creates scoped test identities/records, temporarily changes the test borrowing limit, restores settings, and removes its fixtures. Never point it at the live library project. PGlite is single-connection and cannot verify real multi-connection contention.
-
-## Documentation
-
-For free hosting, the repository includes a Render Blueprint. Follow [Free Render deployment](docs/deployment.md#free-render-deployment), including the separate Supabase Cron setup and hosted Auth redirects. The deployment build does not run application test suites.
-
-- [Architecture and OOP decisions](docs/architecture.md)
-- [Database relationships and workflows](docs/workflows.md)
-- [Generated OpenAPI 3.1 specification](docs/openapi.json)
+- [Project manual](output/pdf/Archthea_Project_Manual.pdf)
+- [Architecture](docs/architecture.md)
+- [UML class diagram](docs/class-diagram.md)
+- [Data relationships and workflows](docs/workflows.md)
+- [API specification](docs/openapi.json)
 - [Security model](docs/security.md)
-- [Deployment and live verification](docs/deployment.md)
-
-Regenerate the API contract with `npm.cmd run docs:api` and the SQL-editor bundle with `npm.cmd run db:bundle`. `npm.cmd run format:check` checks formatting. GitHub Actions runs unit/integration tests, a production build and responsive browser checks.

@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1761" viewBox="0 0 1240 1761" role="img" aria-labelledby="title desc"><title id="title">Library classes</title><desc id="desc">Services, private dependencies and the Supabase repository.. UML class compartments show names, fields and operations extracted from Archthea's JavaScript source.</desc><defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#dce9f7"/></pattern></defs><rect width="100%" height="100%" rx="25" fill="#f8fbff"/><rect width="100%" height="100%" fill="url(#dots)" opacity="0.55"/><rect x="24" y="24" width="1192" height="1713" rx="20" fill="#ffffff" stroke="#d8e6f5"/><g transform="translate(52,53) scale(1.1)" fill="none" stroke="#3977b8" stroke-width="2.5" stroke-linejoin="round"><path d="M0 4 Q12 -2 24 5 V32 Q12 25 0 31 Z M24 5 Q36 -2 48 4 V31 Q36 25 24 32" fill="#e0efff"/><path d="M7 10 L17 13 M7 16 L17 19 M31 13 L41 10 M31 19 L41 16" stroke="#88b0d7"/></g><text x="122" y="62" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#3977b8">ARCHTHEA LIBRARY</text><text x="122" y="99" font-family="Georgia,serif" font-size="31" fill="#243d5b">Library classes</text><text x="54" y="134" font-family="Arial,sans-serif" font-size="15" fill="#526985">Services, private dependencies and the Supabase repository.</text><path d="M0 -10 Q1 -1 10 0 Q1 1 0 10 Q-1 1 -10 0 Q-1 -1 0 -10Z" transform="translate(1172 66) scale(1.1)" fill="#b4a5d5"/><path d="M0 -10 Q1 -1 10 0 Q1 1 0 10 Q-1 1 -10 0 Q-1 -1 0 -10Z" transform="translate(1146 94) scale(0.55)" fill="#b4a5d5"/><line x1="54" y1="154" x2="1186" y2="154" stroke="#dae7f5"/><g transform="translate(44,176)">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 1452.6)">
+<title>LibraryClasses</title>
+<!-- DashboardService&#45;&gt;CatalogService -->
+<g id="edge1" class="edge">
+<title>DashboardService&#45;&gt;CatalogService</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M241.07,-1213.06C230.05,-1184.23 218.16,-1153.13 207.14,-1124.27"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="204.31,-1116.87 210.53,-1123.06 205.31,-1119.08 207.31,-1124.29 207.17,-1124.35 207.03,-1124.4 205.03,-1119.19 203.8,-1125.63 204.31,-1116.87"/>
+<text xml:space="preserve" text-anchor="middle" x="246.89" y="-1173.2" font-family="Arial" font-size="12.00" fill="#486585">catalog</text>
+<text xml:space="preserve" text-anchor="middle" x="215.96" y="-1123.62" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- DashboardService&#45;&gt;CirculationService -->
+<g id="edge2" class="edge">
+<title>DashboardService&#45;&gt;CirculationService</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M378.95,-1213.06C397.48,-1191.86 417.09,-1169.44 436.2,-1147.58"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="441.35,-1141.7 438.79,-1150.09 439.87,-1143.62 436.19,-1147.82 436.08,-1147.72 435.97,-1147.62 439.64,-1143.42 433.37,-1145.35 441.35,-1141.7"/>
+<text xml:space="preserve" text-anchor="middle" x="436.92" y="-1173.2" font-family="Arial" font-size="12.00" fill="#486585">circulation</text>
+<text xml:space="preserve" text-anchor="middle" x="437.66" y="-1153.24" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- DashboardService&#45;&gt;AccountService -->
+<g id="edge3" class="edge">
+<title>DashboardService&#45;&gt;AccountService</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M515.06,-1237.04C642.93,-1189.78 776,-1140.6 776,-1140.6 776,-1140.6 787.42,-1132.61 804.53,-1120.64"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="810.9,-1116.19 806.4,-1123.73 809,-1117.7 804.43,-1120.9 804.34,-1120.78 804.25,-1120.66 808.83,-1117.45 802.28,-1117.83 810.9,-1116.19"/>
+<text xml:space="preserve" text-anchor="middle" x="717.36" y="-1173.2" font-family="Arial" font-size="12.00" fill="#486585">accounts</text>
+<text xml:space="preserve" text-anchor="middle" x="803.69" y="-1126.4" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- DashboardService&#45;&gt;LibraryRepository -->
+<g id="edge4" class="edge">
+<title>DashboardService&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M112.66,-1213.13C52.73,-1174.55 0,-1140.6 0,-1140.6 0,-1140.6 0,-885.4 0,-885.4 0,-885.4 90,-608.2 90,-608.2 90,-608.2 138,-564.8 138,-564.8 138,-564.8 219.94,-514.82 307.62,-461.33"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="314.22,-457.3 309.26,-464.54 312.23,-458.69 307.47,-461.6 307.39,-461.47 307.31,-461.34 312.08,-458.43 305.51,-458.39 314.22,-457.3"/>
+<text xml:space="preserve" text-anchor="middle" x="40.02" y="-845.6" font-family="Arial" font-size="12.00" fill="#486585">repository</text>
+<text xml:space="preserve" text-anchor="middle" x="306.16" y="-467.03" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- CatalogService&#45;&gt;StorageService -->
+<g id="edge5" class="edge">
+<title>CatalogService&#45;&gt;StorageService</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M221.98,-910.72C238.18,-881.91 255.9,-850.42 272.37,-821.15"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="276.2,-814.33 275.42,-823.07 275.15,-816.51 272.41,-821.38 272.28,-821.31 272.15,-821.23 274.89,-816.37 269.14,-819.54 276.2,-814.33"/>
+<text xml:space="preserve" text-anchor="middle" x="279.63" y="-845.6" font-family="Arial" font-size="12.00" fill="#486585">storage</text>
+<text xml:space="preserve" text-anchor="middle" x="275.69" y="-826.3" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- CatalogService&#45;&gt;LibraryRepository -->
+<g id="edge7" class="edge">
+<title>CatalogService&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M132.09,-910.75C116.11,-861.59 100.31,-813 100.31,-813 100.31,-813 100.31,-608.2 100.31,-608.2 100.31,-608.2 203.96,-539.89 307.87,-471.42"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="314.35,-467.15 309.65,-474.55 312.42,-468.6 307.75,-471.67 307.67,-471.55 307.59,-471.42 312.25,-468.35 305.69,-468.54 314.35,-467.15"/>
+<text xml:space="preserve" text-anchor="middle" x="126.66" y="-707" font-family="Arial" font-size="12.00" fill="#486585">repository</text>
+<text xml:space="preserve" text-anchor="middle" x="306.76" y="-477.15" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- CirculationService&#45;&gt;StorageService -->
+<g id="edge6" class="edge">
+<title>CirculationService&#45;&gt;StorageService</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M460.76,-885.47C445.04,-863.91 428.83,-841.68 413.48,-820.62"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="408.79,-814.19 416.42,-818.54 410.34,-816.06 413.63,-820.57 413.51,-820.66 413.39,-820.75 410.1,-816.23 410.6,-822.78 408.79,-814.19"/>
+<text xml:space="preserve" text-anchor="middle" x="456.95" y="-845.6" font-family="Arial" font-size="12.00" fill="#486585">storage</text>
+<text xml:space="preserve" text-anchor="middle" x="422.74" y="-817.53" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- CirculationService&#45;&gt;LibraryRepository -->
+<g id="edge8" class="edge">
+<title>CirculationService&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M546.29,-885.59C541.22,-790.05 534.15,-656.71 528.22,-545.03"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="527.81,-537.24 531.83,-545.04 528.08,-539.65 528.38,-545.22 528.23,-545.23 528.08,-545.24 527.78,-539.66 524.64,-545.42 527.81,-537.24"/>
+<text xml:space="preserve" text-anchor="middle" x="568.37" y="-707" font-family="Arial" font-size="12.00" fill="#486585">repository</text>
+<text xml:space="preserve" text-anchor="middle" x="535.71" y="-547.07" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- AccountService&#45;&gt;LibraryRepository -->
+<g id="edge9" class="edge">
+<title>AccountService&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M846.24,-910.75C792.47,-861.59 739.31,-813 739.31,-813 739.31,-813 674.28,-672.76 614.56,-543.98"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="611.3,-536.96 617.93,-542.7 612.46,-539.09 614.8,-544.15 614.67,-544.21 614.53,-544.28 612.18,-539.21 611.4,-545.73 611.3,-536.96"/>
+<text xml:space="preserve" text-anchor="middle" x="765.66" y="-707" font-family="Arial" font-size="12.00" fill="#486585">repository</text>
+<text xml:space="preserve" text-anchor="middle" x="623.64" y="-542.87" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- StorageService&#45;&gt;LibraryRepository -->
+<g id="edge10" class="edge">
+<title>StorageService&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M383.28,-608.34C393.09,-588.19 403.73,-566.33 414.58,-544.05"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="418.05,-536.91 417.78,-545.68 417.13,-539.15 414.68,-544.17 414.55,-544.1 414.41,-544.04 416.86,-539.02 411.31,-542.53 418.05,-536.91"/>
+<text xml:space="preserve" text-anchor="middle" x="430.07" y="-568.4" font-family="Arial" font-size="12.00" fill="#486585">repository</text>
+<text xml:space="preserve" text-anchor="middle" x="418.46" y="-548.88" font-family="Arial" font-size="12.00" fill="#486585">1</text>
+</g>
+<!-- BaseRepository&#45;&gt;LibraryRepository -->
+<g id="edge12" class="edge">
+<title>BaseRepository&#45;&gt;LibraryRepository</title>
+<path fill="none" stroke="#6674a1" stroke-width="1.8" d="M855.65,-647.23C817.64,-612.03 767.94,-566 718.36,-520.09"/>
+<polygon fill="none" stroke="#6674a1" stroke-width="1.8" points="853.32,-648.89 861.09,-652.27 857.13,-644.78 853.32,-648.89"/>
+<text xml:space="preserve" text-anchor="middle" x="801.1" y="-568.4" font-family="Arial" font-size="12.00" fill="#486585">extends</text>
+</g>
+<!-- LibraryRepository&#45;&gt;SupabaseClient -->
+<g id="edge11" class="edge">
+<title>LibraryRepository&#45;&gt;SupabaseClient</title>
+<path fill="none" stroke="#6c91b8" stroke-width="1.3" d="M517,-129.68C517,-105.47 517,-83.23 517,-65.9"/>
+<polygon fill="#6c91b8" stroke="#6c91b8" stroke-width="1.3" points="517,-58.37 520.6,-66.37 517.15,-60.78 517.15,-66.37 517,-66.37 516.85,-66.37 516.85,-60.78 513.4,-66.37 517,-58.37"/>
+<text xml:space="preserve" text-anchor="middle" x="531.01" y="-89.6" font-family="Arial" font-size="12.00" fill="#486585">client</text>
+<text xml:space="preserve" text-anchor="middle" x="524.18" y="-68.59" font-family="Arial" font-size="12.00" fill="#486585">0..1</text>
+</g>
+<!-- DashboardService -->
+<g id="node1" class="node">
+<title>DashboardService</title>
+<path fill="#ffffff" stroke="none" d="M62.63,-1213C62.63,-1213 503.37,-1213 503.37,-1213 509.37,-1213 515.37,-1219 515.37,-1225 515.37,-1225 515.37,-1422.6 515.37,-1422.6 515.37,-1428.6 509.37,-1434.6 503.37,-1434.6 503.37,-1434.6 62.63,-1434.6 62.63,-1434.6 56.63,-1434.6 50.63,-1428.6 50.63,-1422.6 50.63,-1422.6 50.63,-1225 50.63,-1225 50.63,-1219 56.63,-1213 62.63,-1213"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="50.63,-1379.6 50.63,-1379.6 515.37,-1379.6 515.37,-1379.6 50.63,-1379.6"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="50.63,-1288.4 50.63,-1288.4 515.37,-1288.4 515.37,-1288.4 50.63,-1288.4"/>
+<path fill="none" stroke="#a9c5e4" d="M62.63,-1213C62.63,-1213 503.37,-1213 503.37,-1213 509.37,-1213 515.37,-1219 515.37,-1225 515.37,-1225 515.37,-1422.6 515.37,-1422.6 515.37,-1428.6 509.37,-1434.6 503.37,-1434.6 503.37,-1434.6 62.63,-1434.6 62.63,-1434.6 56.63,-1434.6 50.63,-1428.6 50.63,-1422.6 50.63,-1422.6 50.63,-1225 50.63,-1225 50.63,-1219 56.63,-1213 62.63,-1213"/>
+<polygon fill="#deedff" stroke="none" points="51.63,-1379.6 51.63,-1433.6 514.37,-1433.6 514.37,-1379.6 51.63,-1379.6"/>
+<text xml:space="preserve" text-anchor="start" x="261.05" y="-1413.6" font-family="Arial" font-size="10.00" fill="#526985">SERVICE</text>
+<text xml:space="preserve" text-anchor="start" x="195.18" y="-1394.6" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">DashboardService</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1353.6" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; repository: LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1336.8" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; circulation: CirculationService</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1320" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; catalog: CatalogService</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1303.2" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; accounts: AccountService</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1262.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(repository, circulation, catalog, accounts)</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1245.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ student(user): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="63.63" y="-1228.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ admin(user): Promise</text>
+</g>
+<!-- CatalogService -->
+<g id="node2" class="node">
+<title>CatalogService</title>
+<path fill="#ffffff" stroke="none" d="M33.15,-910.6C33.15,-910.6 296.85,-910.6 296.85,-910.6 302.85,-910.6 308.85,-916.6 308.85,-922.6 308.85,-922.6 308.85,-1103.4 308.85,-1103.4 308.85,-1109.4 302.85,-1115.4 296.85,-1115.4 296.85,-1115.4 33.15,-1115.4 33.15,-1115.4 27.15,-1115.4 21.15,-1109.4 21.15,-1103.4 21.15,-1103.4 21.15,-922.6 21.15,-922.6 21.15,-916.6 27.15,-910.6 33.15,-910.6"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="21.15,-1060.4 21.15,-1060.4 308.85,-1060.4 308.85,-1060.4 21.15,-1060.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="21.15,-1002.8 21.15,-1002.8 308.85,-1002.8 308.85,-1002.8 21.15,-1002.8"/>
+<path fill="none" stroke="#a9c5e4" d="M33.15,-910.6C33.15,-910.6 296.85,-910.6 296.85,-910.6 302.85,-910.6 308.85,-916.6 308.85,-922.6 308.85,-922.6 308.85,-1103.4 308.85,-1103.4 308.85,-1109.4 302.85,-1115.4 296.85,-1115.4 296.85,-1115.4 33.15,-1115.4 33.15,-1115.4 27.15,-1115.4 21.15,-1109.4 21.15,-1103.4 21.15,-1103.4 21.15,-922.6 21.15,-922.6 21.15,-916.6 27.15,-910.6 33.15,-910.6"/>
+<polygon fill="#deedff" stroke="none" points="22.15,-1060.4 22.15,-1114.4 307.85,-1114.4 307.85,-1060.4 22.15,-1060.4"/>
+<text xml:space="preserve" text-anchor="start" x="143.05" y="-1094.4" font-family="Arial" font-size="10.00" fill="#526985">SERVICE</text>
+<text xml:space="preserve" text-anchor="start" x="92.74" y="-1075.4" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">CatalogService</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-1034.4" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; repository: LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-1017.6" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; storage: StorageService</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-976.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(repository, storage)</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-960" font-family="Consolas" font-size="14.00" fill="#243d5b">+ list(user, query): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-943.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ detail(user, id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="34.15" y="-926.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ save(user, id, data): Promise</text>
+</g>
+<!-- CirculationService -->
+<g id="node3" class="node">
+<title>CirculationService</title>
+<path fill="#ffffff" stroke="none" d="M363.42,-885.4C363.42,-885.4 742.58,-885.4 742.58,-885.4 748.58,-885.4 754.58,-891.4 754.58,-897.4 754.58,-897.4 754.58,-1128.6 754.58,-1128.6 754.58,-1134.6 748.58,-1140.6 742.58,-1140.6 742.58,-1140.6 363.42,-1140.6 363.42,-1140.6 357.42,-1140.6 351.42,-1134.6 351.42,-1128.6 351.42,-1128.6 351.42,-897.4 351.42,-897.4 351.42,-891.4 357.42,-885.4 363.42,-885.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="351.42,-1085.6 351.42,-1085.6 754.58,-1085.6 754.58,-1085.6 351.42,-1085.6"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="351.42,-1028 351.42,-1028 754.58,-1028 754.58,-1028 351.42,-1028"/>
+<path fill="none" stroke="#a9c5e4" d="M363.42,-885.4C363.42,-885.4 742.58,-885.4 742.58,-885.4 748.58,-885.4 754.58,-891.4 754.58,-897.4 754.58,-897.4 754.58,-1128.6 754.58,-1128.6 754.58,-1134.6 748.58,-1140.6 742.58,-1140.6 742.58,-1140.6 363.42,-1140.6 363.42,-1140.6 357.42,-1140.6 351.42,-1134.6 351.42,-1128.6 351.42,-1128.6 351.42,-897.4 351.42,-897.4 351.42,-891.4 357.42,-885.4 363.42,-885.4"/>
+<polygon fill="#deedff" stroke="none" points="352.42,-1085.6 352.42,-1139.6 753.58,-1139.6 753.58,-1085.6 352.42,-1085.6"/>
+<text xml:space="preserve" text-anchor="start" x="531.05" y="-1119.6" font-family="Arial" font-size="10.00" fill="#526985">SERVICE</text>
+<text xml:space="preserve" text-anchor="start" x="465.19" y="-1100.6" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">CirculationService</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-1059.6" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; repository: LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-1042.8" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; storage: StorageService</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-1002" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(repository, storage)</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-985.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ borrow(user, data, key): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-968.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ returnBook(user, id, data, key): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-951.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ reserve(user, data, key): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-934.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ cancel(user, id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-918" font-family="Consolas" font-size="14.00" fill="#243d5b">+ loans(query, studentId): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="364.42" y="-901.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ reservations(query, studentId, bookId): Promise</text>
+</g>
+<!-- AccountService -->
+<g id="node4" class="node">
+<title>AccountService</title>
+<path fill="#ffffff" stroke="none" d="M809.75,-910.6C809.75,-910.6 1104.25,-910.6 1104.25,-910.6 1110.25,-910.6 1116.25,-916.6 1116.25,-922.6 1116.25,-922.6 1116.25,-1103.4 1116.25,-1103.4 1116.25,-1109.4 1110.25,-1115.4 1104.25,-1115.4 1104.25,-1115.4 809.75,-1115.4 809.75,-1115.4 803.75,-1115.4 797.75,-1109.4 797.75,-1103.4 797.75,-1103.4 797.75,-922.6 797.75,-922.6 797.75,-916.6 803.75,-910.6 809.75,-910.6"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="797.75,-1060.4 797.75,-1060.4 1116.25,-1060.4 1116.25,-1060.4 797.75,-1060.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="797.75,-1002.8 797.75,-1002.8 1116.25,-1002.8 1116.25,-1002.8 797.75,-1002.8"/>
+<path fill="none" stroke="#a9c5e4" d="M809.75,-910.6C809.75,-910.6 1104.25,-910.6 1104.25,-910.6 1110.25,-910.6 1116.25,-916.6 1116.25,-922.6 1116.25,-922.6 1116.25,-1103.4 1116.25,-1103.4 1116.25,-1109.4 1110.25,-1115.4 1104.25,-1115.4 1104.25,-1115.4 809.75,-1115.4 809.75,-1115.4 803.75,-1115.4 797.75,-1109.4 797.75,-1103.4 797.75,-1103.4 797.75,-922.6 797.75,-922.6 797.75,-916.6 803.75,-910.6 809.75,-910.6"/>
+<polygon fill="#deedff" stroke="none" points="798.75,-1060.4 798.75,-1114.4 1115.25,-1114.4 1115.25,-1060.4 798.75,-1060.4"/>
+<text xml:space="preserve" text-anchor="start" x="935.05" y="-1094.4" font-family="Arial" font-size="10.00" fill="#526985">SERVICE</text>
+<text xml:space="preserve" text-anchor="start" x="881.41" y="-1075.4" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">AccountService</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-1034.4" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; repository: LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-1017.6" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; redirectUrl: String</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-976.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(repository, redirectUrl)</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-960" font-family="Consolas" font-size="14.00" fill="#243d5b">+ detail(id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-943.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ register(actor, data): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="810.75" y="-926.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ eligibility(id): Promise</text>
+</g>
+<!-- StorageService -->
+<g id="node5" class="node">
+<title>StorageService</title>
+<path fill="#ffffff" stroke="none" d="M186.75,-608.2C186.75,-608.2 481.25,-608.2 481.25,-608.2 487.25,-608.2 493.25,-614.2 493.25,-620.2 493.25,-620.2 493.25,-801 493.25,-801 493.25,-807 487.25,-813 481.25,-813 481.25,-813 186.75,-813 186.75,-813 180.75,-813 174.75,-807 174.75,-801 174.75,-801 174.75,-620.2 174.75,-620.2 174.75,-614.2 180.75,-608.2 186.75,-608.2"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="174.75,-758 174.75,-758 493.25,-758 493.25,-758 174.75,-758"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="174.75,-717.2 174.75,-717.2 493.25,-717.2 493.25,-717.2 174.75,-717.2"/>
+<path fill="none" stroke="#a9c5e4" d="M186.75,-608.2C186.75,-608.2 481.25,-608.2 481.25,-608.2 487.25,-608.2 493.25,-614.2 493.25,-620.2 493.25,-620.2 493.25,-801 493.25,-801 493.25,-807 487.25,-813 481.25,-813 481.25,-813 186.75,-813 186.75,-813 180.75,-813 174.75,-807 174.75,-801 174.75,-801 174.75,-620.2 174.75,-620.2 174.75,-614.2 180.75,-608.2 186.75,-608.2"/>
+<polygon fill="#deedff" stroke="none" points="175.75,-758 175.75,-812 492.25,-812 492.25,-758 175.75,-758"/>
+<text xml:space="preserve" text-anchor="start" x="312.05" y="-792" font-family="Arial" font-size="10.00" fill="#526985">SERVICE</text>
+<text xml:space="preserve" text-anchor="start" x="261.18" y="-773" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">StorageService</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-732" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; repository: LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-691.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(repository)</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-674.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ get bucket(): Object</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-657.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ decorate(books): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-640.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ upload(actor, bookId, file): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="187.75" y="-624" font-family="Consolas" font-size="14.00" fill="#243d5b">+ remove(actor, bookId): Promise</text>
+</g>
+<!-- BaseRepository -->
+<g id="node6" class="node">
+<title>BaseRepository</title>
+<path fill="#ffffff" stroke="none" d="M825.78,-653.8C825.78,-653.8 1020.22,-653.8 1020.22,-653.8 1026.22,-653.8 1032.22,-659.8 1032.22,-665.8 1032.22,-665.8 1032.22,-755.4 1032.22,-755.4 1032.22,-761.4 1026.22,-767.4 1020.22,-767.4 1020.22,-767.4 825.78,-767.4 825.78,-767.4 819.78,-767.4 813.78,-761.4 813.78,-755.4 813.78,-755.4 813.78,-665.8 813.78,-665.8 813.78,-659.8 819.78,-653.8 825.78,-653.8"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="813.78,-712.4 813.78,-712.4 1032.22,-712.4 1032.22,-712.4 813.78,-712.4"/>
+<path fill="none" stroke="#a9c5e4" d="M825.78,-653.8C825.78,-653.8 1020.22,-653.8 1020.22,-653.8 1026.22,-653.8 1032.22,-659.8 1032.22,-665.8 1032.22,-665.8 1032.22,-755.4 1032.22,-755.4 1032.22,-761.4 1026.22,-767.4 1020.22,-767.4 1020.22,-767.4 825.78,-767.4 825.78,-767.4 819.78,-767.4 813.78,-761.4 813.78,-755.4 813.78,-755.4 813.78,-665.8 813.78,-665.8 813.78,-659.8 819.78,-653.8 825.78,-653.8"/>
+<polygon fill="#e9e5fb" stroke="none" points="814.78,-712.4 814.78,-766.4 1031.22,-766.4 1031.22,-712.4 814.78,-712.4"/>
+<text xml:space="preserve" text-anchor="start" x="890.22" y="-746.4" font-family="Arial" font-size="10.00" fill="#526985">REPOSITORY</text>
+<text xml:space="preserve" text-anchor="start" x="846.86" y="-727.4" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">BaseRepository</text>
+<text xml:space="preserve" text-anchor="start" x="826.78" y="-686.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ execute(query): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="826.78" y="-669.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ rpc(): Promise</text>
+</g>
+<!-- LibraryRepository -->
+<g id="node7" class="node">
+<title>LibraryRepository</title>
+<path fill="#ffffff" stroke="none" d="M327.42,-129.4C327.42,-129.4 706.58,-129.4 706.58,-129.4 712.58,-129.4 718.58,-135.4 718.58,-141.4 718.58,-141.4 718.58,-523.8 718.58,-523.8 718.58,-529.8 712.58,-535.8 706.58,-535.8 706.58,-535.8 327.42,-535.8 327.42,-535.8 321.42,-535.8 315.42,-529.8 315.42,-523.8 315.42,-523.8 315.42,-141.4 315.42,-141.4 315.42,-135.4 321.42,-129.4 327.42,-129.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="315.42,-480.8 315.42,-480.8 718.58,-480.8 718.58,-480.8 315.42,-480.8"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="315.42,-440 315.42,-440 718.58,-440 718.58,-440 315.42,-440"/>
+<path fill="none" stroke="#a9c5e4" d="M327.42,-129.4C327.42,-129.4 706.58,-129.4 706.58,-129.4 712.58,-129.4 718.58,-135.4 718.58,-141.4 718.58,-141.4 718.58,-523.8 718.58,-523.8 718.58,-529.8 712.58,-535.8 706.58,-535.8 706.58,-535.8 327.42,-535.8 327.42,-535.8 321.42,-535.8 315.42,-529.8 315.42,-523.8 315.42,-523.8 315.42,-141.4 315.42,-141.4 315.42,-135.4 321.42,-129.4 327.42,-129.4"/>
+<polygon fill="#e9e5fb" stroke="none" points="316.42,-480.8 316.42,-534.8 717.58,-534.8 717.58,-480.8 316.42,-480.8"/>
+<text xml:space="preserve" text-anchor="start" x="484.22" y="-514.8" font-family="Arial" font-size="10.00" fill="#526985">REPOSITORY</text>
+<text xml:space="preserve" text-anchor="start" x="430.87" y="-495.8" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">LibraryRepository</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-454.8" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; client: SupabaseClient | null</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-414" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(client)</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-397.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ get client(): SupabaseClient</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-380.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ rpc(name, args): Promise {override}</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-363.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ profile(id, scopedClient): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-346.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ catalog(query, actorId): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-330" font-family="Consolas" font-size="14.00" fill="#243d5b">+ book(id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-313.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ references(table, scopedClient): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-296.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ copies(book, query): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-279.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ loans(query, studentId): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-262.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ loan(id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-246" font-family="Consolas" font-size="14.00" fill="#243d5b">+ reservations(query, studentId, bookId): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-229.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ students(query): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-212.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ student(id): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-195.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ settings(scopedClient): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-178.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ notifications(id, query, scopedClient): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-162" font-family="Consolas" font-size="14.00" fill="#243d5b">+ audit(query, scopedClient): Promise</text>
+<text xml:space="preserve" text-anchor="start" x="328.42" y="-145.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ count(table, filters): Promise</text>
+</g>
+<!-- SupabaseClient -->
+<g id="node8" class="node">
+<title>SupabaseClient</title>
+<path fill="#f0f5fa" stroke="none" d="M443.73,0C443.73,0 590.27,0 590.27,0 596.27,0 602.27,-6 602.27,-12 602.27,-12 602.27,-45 602.27,-45 602.27,-51 596.27,-57 590.27,-57 590.27,-57 443.73,-57 443.73,-57 437.73,-57 431.73,-51 431.73,-45 431.73,-45 431.73,-12 431.73,-12 431.73,-6 437.73,0 443.73,0"/>
+<path fill="none" stroke="#bac9db" d="M443.73,0C443.73,0 590.27,0 590.27,0 596.27,0 602.27,-6 602.27,-12 602.27,-12 602.27,-45 602.27,-45 602.27,-51 596.27,-57 590.27,-57 590.27,-57 443.73,-57 443.73,-57 437.73,-57 431.73,-51 431.73,-45 431.73,-45 431.73,-12 431.73,-12 431.73,-6 437.73,0 443.73,0"/>
+<text xml:space="preserve" text-anchor="start" x="478.93" y="-35" font-family="Arial" font-size="10.00" fill="#243d5b">EXTERNAL SDK</text>
+<text xml:space="preserve" text-anchor="start" x="445.73" y="-16.9" font-family="Arial" font-weight="bold" font-size="19.00" fill="#243d5b">SupabaseClient</text>
+</g>
+</g>
+</g><line x1="54" y1="1670" x2="1186" y2="1670" stroke="#dae7f5"/><text x="54" y="1699" font-family="Arial,sans-serif" font-size="13" fill="#486585">+ public | - private | get = JavaScript getter | Types describe runtime values.</text><text x="54" y="1722" font-family="Arial,sans-serif" font-size="13" fill="#486585">Hollow triangle: inheritance | Solid arrow: stored reference | Dashed arrow: dependency | 1: one reference</text></svg>

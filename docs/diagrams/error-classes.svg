@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1285" height="841" viewBox="0 0 1285 841" role="img" aria-labelledby="title desc"><title id="title">Application errors</title><desc id="desc">Inheritance and the overridden publicBody getter used by the central error handler.. UML class compartments show names, fields and operations extracted from Archthea's JavaScript source.</desc><defs><pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#dce9f7"/></pattern></defs><rect width="100%" height="100%" rx="25" fill="#f8fbff"/><rect width="100%" height="100%" fill="url(#dots)" opacity="0.55"/><rect x="24" y="24" width="1237" height="793" rx="20" fill="#ffffff" stroke="#d8e6f5"/><g transform="translate(52,53) scale(1.1)" fill="none" stroke="#3977b8" stroke-width="2.5" stroke-linejoin="round"><path d="M0 4 Q12 -2 24 5 V32 Q12 25 0 31 Z M24 5 Q36 -2 48 4 V31 Q36 25 24 32" fill="#e0efff"/><path d="M7 10 L17 13 M7 16 L17 19 M31 13 L41 10 M31 19 L41 16" stroke="#88b0d7"/></g><text x="122" y="62" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#3977b8">ARCHTHEA LIBRARY</text><text x="122" y="99" font-family="Georgia,serif" font-size="31" fill="#243d5b">Application errors</text><text x="54" y="134" font-family="Arial,sans-serif" font-size="15" fill="#526985">Inheritance and the overridden publicBody getter used by the central error handler.</text><path d="M0 -10 Q1 -1 10 0 Q1 1 0 10 Q-1 1 -10 0 Q-1 -1 0 -10Z" transform="translate(1217 66) scale(1.1)" fill="#b4a5d5"/><path d="M0 -10 Q1 -1 10 0 Q1 1 0 10 Q-1 1 -10 0 Q-1 -1 0 -10Z" transform="translate(1191 94) scale(0.55)" fill="#b4a5d5"/><line x1="54" y1="154" x2="1231" y2="154" stroke="#dae7f5"/><g transform="translate(44,176)">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(18 533.4)">
+<title>ErrorClasses</title>
+<!-- AppError&#45;&gt;AuthenticationError -->
+<g id="edge2" class="edge">
+<title>AppError&#45;&gt;AuthenticationError</title>
+<path fill="none" stroke="#8870a1" stroke-width="1.8" d="M362.45,-225.66C298.29,-189.37 236.45,-154.4 236.45,-154.4 236.45,-154.4 213.91,-141.09 187.68,-125.59"/>
+<polygon fill="none" stroke="#8870a1" stroke-width="1.8" points="360.8,-227.94 369.14,-229.44 363.56,-223.07 360.8,-227.94"/>
+</g>
+<!-- AppError&#45;&gt;ForbiddenError -->
+<g id="edge3" class="edge">
+<title>AppError&#45;&gt;ForbiddenError</title>
+<path fill="none" stroke="#8870a1" stroke-width="1.8" d="M437.29,-203.84C419.51,-176.55 401.12,-148.32 386.29,-125.55"/>
+<polygon fill="none" stroke="#8870a1" stroke-width="1.8" points="434.84,-205.2 441.55,-210.38 439.53,-202.15 434.84,-205.2"/>
+</g>
+<!-- AppError&#45;&gt;ValidationError -->
+<g id="edge4" class="edge">
+<title>AppError&#45;&gt;ValidationError</title>
+<path fill="none" stroke="#8870a1" stroke-width="1.8" d="M569.51,-203.98C580.38,-187.3 591.47,-170.27 601.85,-154.35"/>
+<polygon fill="none" stroke="#8870a1" stroke-width="1.8" points="567.37,-202.15 565.35,-210.38 572.06,-205.2 567.37,-202.15"/>
+</g>
+<!-- AppError&#45;&gt;ConfigurationError -->
+<g id="edge5" class="edge">
+<title>AppError&#45;&gt;ConfigurationError</title>
+<path fill="none" stroke="#8870a1" stroke-width="1.8" d="M645.17,-241.26C719.87,-207.45 810.62,-166.38 882.35,-133.91"/>
+<polygon fill="none" stroke="#8870a1" stroke-width="1.8" points="644.29,-238.58 638.15,-244.43 646.6,-243.69 644.29,-238.58"/>
+</g>
+<!-- Error&#45;&gt;AppError -->
+<g id="edge1" class="edge">
+<title>Error&#45;&gt;AppError</title>
+<path fill="none" stroke="#8870a1" stroke-width="1.8" d="M503.45,-448.09C503.45,-433.88 503.45,-417.03 503.45,-400.01"/>
+<polygon fill="none" stroke="#8870a1" stroke-width="1.8" points="500.65,-447.68 503.45,-455.68 506.25,-447.68 500.65,-447.68"/>
+</g>
+<!-- AppError -->
+<g id="node1" class="node">
+<title>AppError</title>
+<path fill="#ffffff" stroke="none" d="M383.14,-212.4C383.14,-212.4 623.76,-212.4 623.76,-212.4 629.76,-212.4 635.76,-218.4 635.76,-224.4 635.76,-224.4 635.76,-388.4 635.76,-388.4 635.76,-394.4 629.76,-400.4 623.76,-400.4 623.76,-400.4 383.14,-400.4 383.14,-400.4 377.14,-400.4 371.14,-394.4 371.14,-388.4 371.14,-388.4 371.14,-224.4 371.14,-224.4 371.14,-218.4 377.14,-212.4 383.14,-212.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="371.14,-345.4 371.14,-345.4 635.76,-345.4 635.76,-345.4 371.14,-345.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="371.14,-271 371.14,-271 635.76,-271 635.76,-271 371.14,-271"/>
+<path fill="none" stroke="#a9c5e4" d="M383.14,-212.4C383.14,-212.4 623.76,-212.4 623.76,-212.4 629.76,-212.4 635.76,-218.4 635.76,-224.4 635.76,-224.4 635.76,-388.4 635.76,-388.4 635.76,-394.4 629.76,-400.4 623.76,-400.4 623.76,-400.4 383.14,-400.4 383.14,-400.4 377.14,-400.4 371.14,-394.4 371.14,-388.4 371.14,-388.4 371.14,-224.4 371.14,-224.4 371.14,-218.4 377.14,-212.4 383.14,-212.4"/>
+<polygon fill="#f9e5ee" stroke="none" points="372.14,-345.4 372.14,-399.4 634.76,-399.4 634.76,-345.4 372.14,-345.4"/>
+<text xml:space="preserve" text-anchor="start" x="450.94" y="-379.4" font-family="Arial" font-size="10.00" fill="#526985">APPLICATION ERROR</text>
+<text xml:space="preserve" text-anchor="start" x="459.56" y="-360.4" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">AppError</text>
+<text xml:space="preserve" text-anchor="start" x="384.14" y="-319.4" font-family="Consolas" font-size="14.00" fill="#243d5b">+ name: String</text>
+<text xml:space="preserve" text-anchor="start" x="384.14" y="-302.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ status: Number</text>
+<text xml:space="preserve" text-anchor="start" x="384.14" y="-285.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ code: String</text>
+<text xml:space="preserve" text-anchor="start" x="384.14" y="-245" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(message, options)</text>
+<text xml:space="preserve" text-anchor="start" x="384.14" y="-228.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ get publicBody(): Object</text>
+</g>
+<!-- AuthenticationError -->
+<g id="node2" class="node">
+<title>AuthenticationError</title>
+<path fill="#ffffff" stroke="none" d="M12,-28.8C12,-28.8 202.9,-28.8 202.9,-28.8 208.9,-28.8 214.9,-34.8 214.9,-40.8 214.9,-40.8 214.9,-113.6 214.9,-113.6 214.9,-119.6 208.9,-125.6 202.9,-125.6 202.9,-125.6 12,-125.6 12,-125.6 6,-125.6 0,-119.6 0,-113.6 0,-113.6 0,-40.8 0,-40.8 0,-34.8 6,-28.8 12,-28.8"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="0,-70.6 0,-70.6 214.9,-70.6 214.9,-70.6 0,-70.6"/>
+<path fill="none" stroke="#a9c5e4" d="M12,-28.8C12,-28.8 202.9,-28.8 202.9,-28.8 208.9,-28.8 214.9,-34.8 214.9,-40.8 214.9,-40.8 214.9,-113.6 214.9,-113.6 214.9,-119.6 208.9,-125.6 202.9,-125.6 202.9,-125.6 12,-125.6 12,-125.6 6,-125.6 0,-119.6 0,-113.6 0,-113.6 0,-40.8 0,-40.8 0,-34.8 6,-28.8 12,-28.8"/>
+<polygon fill="#f9e5ee" stroke="none" points="1,-70.6 1,-124.6 213.9,-124.6 213.9,-70.6 1,-70.6"/>
+<text xml:space="preserve" text-anchor="start" x="54.94" y="-104.6" font-family="Arial" font-size="10.00" fill="#526985">APPLICATION ERROR</text>
+<text xml:space="preserve" text-anchor="start" x="13" y="-85.6" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">AuthenticationError</text>
+<text xml:space="preserve" text-anchor="start" x="13" y="-44.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(message)</text>
+</g>
+<!-- ForbiddenError -->
+<g id="node3" class="node">
+<title>ForbiddenError</title>
+<path fill="#ffffff" stroke="none" d="M269.78,-28.8C269.78,-28.8 441.12,-28.8 441.12,-28.8 447.12,-28.8 453.12,-34.8 453.12,-40.8 453.12,-40.8 453.12,-113.6 453.12,-113.6 453.12,-119.6 447.12,-125.6 441.12,-125.6 441.12,-125.6 269.78,-125.6 269.78,-125.6 263.78,-125.6 257.78,-119.6 257.78,-113.6 257.78,-113.6 257.78,-40.8 257.78,-40.8 257.78,-34.8 263.78,-28.8 269.78,-28.8"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="257.78,-70.6 257.78,-70.6 453.12,-70.6 453.12,-70.6 257.78,-70.6"/>
+<path fill="none" stroke="#a9c5e4" d="M269.78,-28.8C269.78,-28.8 441.12,-28.8 441.12,-28.8 447.12,-28.8 453.12,-34.8 453.12,-40.8 453.12,-40.8 453.12,-113.6 453.12,-113.6 453.12,-119.6 447.12,-125.6 441.12,-125.6 441.12,-125.6 269.78,-125.6 269.78,-125.6 263.78,-125.6 257.78,-119.6 257.78,-113.6 257.78,-113.6 257.78,-40.8 257.78,-40.8 257.78,-34.8 263.78,-28.8 269.78,-28.8"/>
+<polygon fill="#f9e5ee" stroke="none" points="258.78,-70.6 258.78,-124.6 452.12,-124.6 452.12,-70.6 258.78,-70.6"/>
+<text xml:space="preserve" text-anchor="start" x="302.94" y="-104.6" font-family="Arial" font-size="10.00" fill="#526985">APPLICATION ERROR</text>
+<text xml:space="preserve" text-anchor="start" x="282.11" y="-85.6" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">ForbiddenError</text>
+<text xml:space="preserve" text-anchor="start" x="270.78" y="-44.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(message)</text>
+</g>
+<!-- ValidationError -->
+<g id="node4" class="node">
+<title>ValidationError</title>
+<path fill="#ffffff" stroke="none" d="M508.05,0C508.05,0 794.85,0 794.85,0 800.85,0 806.85,-6 806.85,-12 806.85,-12 806.85,-142.4 806.85,-142.4 806.85,-148.4 800.85,-154.4 794.85,-154.4 794.85,-154.4 508.05,-154.4 508.05,-154.4 502.05,-154.4 496.05,-148.4 496.05,-142.4 496.05,-142.4 496.05,-12 496.05,-12 496.05,-6 502.05,0 508.05,0"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="496.05,-99.4 496.05,-99.4 806.85,-99.4 806.85,-99.4 496.05,-99.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="496.05,-58.6 496.05,-58.6 806.85,-58.6 806.85,-58.6 496.05,-58.6"/>
+<path fill="none" stroke="#a9c5e4" d="M508.05,0C508.05,0 794.85,0 794.85,0 800.85,0 806.85,-6 806.85,-12 806.85,-12 806.85,-142.4 806.85,-142.4 806.85,-148.4 800.85,-154.4 794.85,-154.4 794.85,-154.4 508.05,-154.4 508.05,-154.4 502.05,-154.4 496.05,-148.4 496.05,-142.4 496.05,-142.4 496.05,-12 496.05,-12 496.05,-6 502.05,0 508.05,0"/>
+<polygon fill="#f9e5ee" stroke="none" points="497.05,-99.4 497.05,-153.4 805.85,-153.4 805.85,-99.4 497.05,-99.4"/>
+<text xml:space="preserve" text-anchor="start" x="598.94" y="-133.4" font-family="Arial" font-size="10.00" fill="#526985">APPLICATION ERROR</text>
+<text xml:space="preserve" text-anchor="start" x="579.21" y="-114.4" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">ValidationError</text>
+<text xml:space="preserve" text-anchor="start" x="509.05" y="-73.4" font-family="Consolas" font-size="14.00" fill="#243d5b">&#45; issues: Array</text>
+<text xml:space="preserve" text-anchor="start" x="509.05" y="-32.6" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor(issues)</text>
+<text xml:space="preserve" text-anchor="start" x="509.05" y="-15.8" font-family="Consolas" font-size="14.00" fill="#243d5b">+ get publicBody(): Object {override}</text>
+</g>
+<!-- ConfigurationError -->
+<g id="node5" class="node">
+<title>ConfigurationError</title>
+<path fill="#ffffff" stroke="none" d="M862.05,-20.4C862.05,-20.4 1148.85,-20.4 1148.85,-20.4 1154.85,-20.4 1160.85,-26.4 1160.85,-32.4 1160.85,-32.4 1160.85,-122 1160.85,-122 1160.85,-128 1154.85,-134 1148.85,-134 1148.85,-134 862.05,-134 862.05,-134 856.05,-134 850.05,-128 850.05,-122 850.05,-122 850.05,-32.4 850.05,-32.4 850.05,-26.4 856.05,-20.4 862.05,-20.4"/>
+<polygon fill="#a9c5e4" stroke="#a9c5e4" points="850.05,-79 850.05,-79 1160.85,-79 1160.85,-79 850.05,-79"/>
+<path fill="none" stroke="#a9c5e4" d="M862.05,-20.4C862.05,-20.4 1148.85,-20.4 1148.85,-20.4 1154.85,-20.4 1160.85,-26.4 1160.85,-32.4 1160.85,-32.4 1160.85,-122 1160.85,-122 1160.85,-128 1154.85,-134 1148.85,-134 1148.85,-134 862.05,-134 862.05,-134 856.05,-134 850.05,-128 850.05,-122 850.05,-122 850.05,-32.4 850.05,-32.4 850.05,-26.4 856.05,-20.4 862.05,-20.4"/>
+<polygon fill="#f9e5ee" stroke="none" points="851.05,-79 851.05,-133 1159.85,-133 1159.85,-79 851.05,-79"/>
+<text xml:space="preserve" text-anchor="start" x="952.94" y="-113" font-family="Arial" font-size="10.00" fill="#526985">APPLICATION ERROR</text>
+<text xml:space="preserve" text-anchor="start" x="915.45" y="-94" font-family="Arial" font-weight="bold" font-size="20.00" fill="#243d5b">ConfigurationError</text>
+<text xml:space="preserve" text-anchor="start" x="863.05" y="-53" font-family="Consolas" font-size="14.00" fill="#243d5b">+ constructor()</text>
+<text xml:space="preserve" text-anchor="start" x="863.05" y="-36.2" font-family="Consolas" font-size="14.00" fill="#243d5b">+ get publicBody(): Object {override}</text>
+</g>
+<!-- Error -->
+<g id="node6" class="node">
+<title>Error</title>
+<path fill="#f0f5fa" stroke="none" d="M448.38,-458.4C448.38,-458.4 558.51,-458.4 558.51,-458.4 564.51,-458.4 570.51,-464.4 570.51,-470.4 570.51,-470.4 570.51,-503.4 570.51,-503.4 570.51,-509.4 564.51,-515.4 558.51,-515.4 558.51,-515.4 448.38,-515.4 448.38,-515.4 442.38,-515.4 436.38,-509.4 436.38,-503.4 436.38,-503.4 436.38,-470.4 436.38,-470.4 436.38,-464.4 442.38,-458.4 448.38,-458.4"/>
+<path fill="none" stroke="#bac9db" d="M448.38,-458.4C448.38,-458.4 558.51,-458.4 558.51,-458.4 564.51,-458.4 570.51,-464.4 570.51,-470.4 570.51,-470.4 570.51,-503.4 570.51,-503.4 570.51,-509.4 564.51,-515.4 558.51,-515.4 558.51,-515.4 448.38,-515.4 448.38,-515.4 442.38,-515.4 436.38,-509.4 436.38,-503.4 436.38,-503.4 436.38,-470.4 436.38,-470.4 436.38,-464.4 442.38,-458.4 448.38,-458.4"/>
+<text xml:space="preserve" text-anchor="start" x="450.38" y="-493.4" font-family="Arial" font-size="10.00" fill="#243d5b">JAVASCRIPT BUILT&#45;IN</text>
+<text xml:space="preserve" text-anchor="start" x="480.22" y="-475.3" font-family="Arial" font-weight="bold" font-size="19.00" fill="#243d5b">Error</text>
+</g>
+</g>
+</g><line x1="54" y1="750" x2="1231" y2="750" stroke="#dae7f5"/><text x="54" y="779" font-family="Arial,sans-serif" font-size="13" fill="#486585">+ public | - private | get = JavaScript getter | Types describe runtime values.</text><text x="54" y="802" font-family="Arial,sans-serif" font-size="13" fill="#486585">Hollow triangle: inheritance | Solid arrow: stored reference | Dashed arrow: dependency | 1: one reference</text></svg>

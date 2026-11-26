@@ -1,0 +1,120 @@
+classDiagram
+    direction TB
+    class AccountService {
+        -repository : LibraryRepository
+        -redirectUrl : String
+        +constructor(repository, redirectUrl)
+        +detail(id) Promise
+        +register(actor, data) Promise
+        +eligibility(id) Promise
+    }
+    class CatalogService {
+        -repository : LibraryRepository
+        -storage : StorageService
+        +constructor(repository, storage)
+        +list(user, query) Promise
+        +detail(user, id) Promise
+        +save(user, id, data) Promise
+    }
+    class CirculationService {
+        -repository : LibraryRepository
+        -storage : StorageService
+        +constructor(repository, storage)
+        +borrow(user, data, key) Promise
+        +returnBook(user, id, data, key) Promise
+        +reserve(user, data, key) Promise
+        +cancel(user, id) Promise
+        +loans(query, studentId) Promise
+        +reservations(query, studentId, bookId) Promise
+    }
+    class DashboardService {
+        -repository : LibraryRepository
+        -circulation : CirculationService
+        -catalog : CatalogService
+        -accounts : AccountService
+        +constructor(repository, circulation, catalog, accounts)
+        +student(user) Promise
+        +admin(user) Promise
+    }
+    class StorageService {
+        -repository : LibraryRepository
+        +constructor(repository)
+        +get bucket() Object
+        +decorate(books) Promise
+        +upload(actor, bookId, file) Promise
+        +remove(actor, bookId) Promise
+    }
+    class BaseRepository {
+        +execute(query) Promise
+        +rpc() Promise
+    }
+    class LibraryRepository {
+        -client : SupabaseClient?
+        +constructor(client)
+        +get client() SupabaseClient
+        +rpc(name, args) Promise
+        +profile(id, scopedClient) Promise
+        +catalog(query, actorId) Promise
+        +book(id) Promise
+        +references(table, scopedClient) Promise
+        +copies(book, query) Promise
+        +loans(query, studentId) Promise
+        +loan(id) Promise
+        +reservations(query, studentId, bookId) Promise
+        +students(query) Promise
+        +student(id) Promise
+        +settings(scopedClient) Promise
+        +notifications(id, query, scopedClient) Promise
+        +audit(query, scopedClient) Promise
+        +count(table, filters) Promise
+    }
+    class AppError {
+        +name : String
+        +status : Number
+        +code : String
+        +constructor(message, options)
+        +get publicBody() Object
+    }
+    class AuthenticationError {
+        +constructor(message)
+    }
+    class ForbiddenError {
+        +constructor(message)
+    }
+    class ValidationError {
+        -issues : Array
+        +constructor(issues)
+        +get publicBody() Object
+    }
+    class ConfigurationError {
+        +constructor()
+        +get publicBody() Object
+    }
+    class Error {
+        <<external>>
+    }
+    class SupabaseClient {
+        <<external>>
+    }
+    BaseRepository <|-- LibraryRepository
+    Error <|-- AppError
+    AppError <|-- AuthenticationError
+    AppError <|-- ForbiddenError
+    AppError <|-- ValidationError
+    AppError <|-- ConfigurationError
+    DashboardService --> "1" CatalogService : catalog
+    DashboardService --> "1" CirculationService : circulation
+    DashboardService --> "1" AccountService : accounts
+    DashboardService --> "1" LibraryRepository : repository
+    CatalogService --> "1" StorageService : storage
+    CirculationService --> "1" StorageService : storage
+    CatalogService --> "1" LibraryRepository : repository
+    CirculationService --> "1" LibraryRepository : repository
+    AccountService --> "1" LibraryRepository : repository
+    StorageService --> "1" LibraryRepository : repository
+    LibraryRepository --> "0..1" SupabaseClient : client
+    CatalogService ..> AppError : throws
+    CatalogService ..> ForbiddenError : throws
+    StorageService ..> AppError : throws
+    AccountService ..> AppError : throws
+    LibraryRepository ..> ConfigurationError : throws
