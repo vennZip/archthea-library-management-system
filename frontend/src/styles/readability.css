@@ -4,9 +4,6 @@
   min-width: 31px;
   height: 43px;
 }
-:root {
-  --muted: #5e6b60;
-}
 .breadcrumb,
 .user-profile small,
 .page-heading .eyebrow,
@@ -55,11 +52,11 @@
 .table-toolbar > span,
 .student-detail-intro p,
 .quick-reservations {
-  color: #5d7055;
+  color: var(--muted);
 }
 .status {
   font-size: 12px;
-  color: #536449;
+  color: var(--accent-strong);
 }
 .status-active,
 .status-available,
@@ -86,7 +83,7 @@
 .status-cancelled,
 .status-archived,
 .status-maintenance {
-  color: #5a6851;
+  color: var(--accent-strong);
 }
 .availability-tag {
   color: #42632e;
@@ -112,7 +109,7 @@ table {
 }
 th {
   font-size: 13px;
-  color: #5d7055;
+  color: var(--muted);
 }
 .book-card h3 {
   font-size: 16px;
@@ -151,13 +148,13 @@ th {
   background: transparent;
 }
 .tab-bar button {
-  color: #60734f;
+  color: var(--accent-strong);
 }
 .empty-state p {
-  color: #627854;
+  color: var(--accent-strong);
 }
 .empty-state h3 {
-  color: #415e35;
+  color: var(--accent-strong);
 }
 .book-cover .cover-author,
 .book-cover .cover-publisher {
@@ -175,60 +172,37 @@ th {
 .landing-footer > span,
 .landing .eyebrow,
 .landing-divider p {
-  color: #61754e;
+  color: var(--muted);
 }
 .hero-copy h1 em,
 .section-intro h2 em,
 .collection-section h2 em {
-  color: #6c7845;
+  color: var(--accent);
 }
 .auth-help > span,
 .auth-form-wrap > .text-link,
 .auth-form-meta a {
-  color: #536f3e;
+  color: var(--accent-strong);
 }
 .auth-help p,
 .auth-form-meta,
 .auth-footer,
 .auth-form-wrap > .eyebrow {
-  color: #61734f;
+  color: var(--muted);
 }
 .connection-notice {
-  color: #596c37;
+  color: var(--accent-strong);
 }
 .floating-note {
-  color: #586a3d;
-}
-.scene-book-one {
-  background: #865235;
-}
-.scene-book-three {
-  color: #39452d;
-}
-.art-stamp {
-  color: #586b3d;
-}
-.decorative-spine:nth-child(1) {
-  background: #58694a;
-  color: #fff8e4;
-}
-.decorative-spine:nth-child(2) {
-  color: #3e4329;
-}
-.decorative-spine:nth-child(4) {
-  background: #815e41;
-  color: #fff8e4;
-}
-.decorative-spine:nth-child(5) {
-  color: #30452b;
+  color: var(--accent-strong);
 }
 .landing .collection-section .eyebrow,
 .landing .collection-section p:not(.eyebrow) {
-  color: #53623f;
+  color: var(--accent-strong);
 }
 input::placeholder,
 textarea::placeholder {
-  color: #657456;
+  color: var(--accent-strong);
 }
 .auth-form-meta,
 .auth-help > span,

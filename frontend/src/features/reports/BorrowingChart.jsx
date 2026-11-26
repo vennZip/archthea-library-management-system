@@ -32,14 +32,14 @@ export function BorrowingChart({ data = [], compact = false }) {
               x2="627"
               y1={184 - i * 40}
               y2={184 - i * 40}
-              stroke="#e6e9e3"
+              stroke="var(--border)"
               strokeDasharray="4 4"
             />
             <text
               x="26"
               y={188 - i * 40}
               textAnchor="end"
-              fill="#7a857e"
+              fill="var(--muted)"
               fontSize="11"
             >
               {number(step * i)}
@@ -61,7 +61,7 @@ export function BorrowingChart({ data = [], compact = false }) {
                 width="22"
                 height={borrowedHeight}
                 rx="4"
-                fill="#22594b"
+                fill="var(--chart-borrowed)"
               />
               <rect
                 x={x + 28}
@@ -69,13 +69,13 @@ export function BorrowingChart({ data = [], compact = false }) {
                 width="22"
                 height={returnedHeight}
                 rx="4"
-                fill="#bed0b7"
+                fill="var(--chart-returned)"
               />
               <text
                 x={x + 25}
                 y="211"
                 textAnchor="middle"
-                fill="#737e76"
+                fill="var(--muted)"
                 fontSize="12"
               >
                 {new Intl.DateTimeFormat("en", {
