@@ -13,9 +13,10 @@ const server = createApp().listen(env.PORT, env.HOST, () => {
       "Add Supabase configuration to backend/.env to enable authenticated operations.",
     );
 });
-const stopJobs = isConfigured
-  ? startScheduler(new LibraryRepository(serviceClient), env.JOBS_INTERVAL_MS)
-  : () => {};
+const stopJobs =
+  isConfigured && env.RUN_SCHEDULED_JOBS
+    ? startScheduler(new LibraryRepository(serviceClient), env.JOBS_INTERVAL_MS)
+    : () => {};
 function shutdown() {
   stopJobs();
   server.close(() => process.exit(0));

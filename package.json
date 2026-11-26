@@ -24,7 +24,8 @@
     "docs:api": "node scripts/generate-openapi.js",
     "format": "prettier --write . --ignore-unknown",
     "format:check": "prettier --check . --ignore-unknown",
-    "verify:connection": "node backend/scripts/verify-connection.js"
+    "verify:connection": "node backend/scripts/verify-connection.js",
+    "build:render": "node scripts/build-render.js"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.1",

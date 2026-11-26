@@ -1,5 +1,22 @@
 # Deployment and live verification
 
+## Free Render deployment
+
+The root `render.yaml` deploys one free Node web service in Singapore. The React/Vite frontend and Express backend remain separate projects, but the production server serves the built frontend and `/api/v1` under one HTTPS origin. Supabase remains the existing database, authentication and private Storage provider. No database records are recreated.
+
+1. In the existing Supabase project's SQL editor, run only `supabase/deployment/enable-cron.sql`. This enables Supabase Cron, schedules `public.run_library_jobs()` every minute and retains 14 days of its scheduler history. Do not rerun `setup.sql` against the populated project. The deployed Render process disables its in-process scheduler so jobs continue in the database while the free web service sleeps.
+2. Create a Render account and authorize access to the private GitHub repository `vennZip/archthea-library-management-system`.
+3. Create a **Blueprint** from that repository. It reads `render.yaml` from `main`. A shortcut is https://dashboard.render.com/select-repo?type=blueprint&repo=https://github.com/vennZip/archthea-library-management-system.
+4. Render asks for `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY` and `SUPABASE_SERVICE_ROLE_KEY`. Copy these from the existing backend/.env into Render's environment form. Never paste them in chat or commit them. The build script forwards only the public Supabase values to Vite; the service-role key is removed from the frontend build environment.
+5. Deploy. Render sets the HTTPS origin, listening port, host binding, proxy trust and frontend-serving switch from the Blueprint. The build command is `npm ci --include=dev && npm run build:render`; the start command is `npm start`. Application tests are not part of this hosting build command.
+6. After Render returns the actual URL, set the Supabase Auth **Site URL** to it and add `<your-render-url>/reset-password` and `<your-render-url>/auth/callback` to the allowed Redirect URLs. Existing localhost redirects can remain for local development. Email SMTP settings stay in Supabase.
+
+The free web service can sleep after inactivity and take time to wake for its next request. Supabase Cron must be enabled for reminders and reservation expiry to run independently. Render's automatic `RENDER_EXTERNAL_URL` is used as the allowed frontend origin and password-email destination. If adding a custom domain later, update FRONTEND_ORIGINS and the Supabase Auth URL settings to match.
+
+The service exposes `/api/v1/health` as its deployment health endpoint. `/app/...` navigation falls back to React's index.html, while missing API endpoints remain JSON errors. Hashed frontend assets have immutable caching; index.html is not cached. The hosted Content Security Policy permits only the app and the configured Supabase origin for network and cover-image access.
+
+References: [Render Blueprints](https://render.com/docs/blueprint-spec), [Render default environment variables](https://render.com/docs/environment-variables), [free hosting limits](https://render.com/docs/free), [Supabase Cron setup](https://supabase.com/docs/guides/cron/install).
+
 ## Independent applications
 
 Deploy the frontend as static assets and the backend as a Node.js service. Supabase remains the database, Auth and Storage provider. No additional backend framework or hosted Site runtime is required.

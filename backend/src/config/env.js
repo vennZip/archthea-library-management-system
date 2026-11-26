@@ -22,6 +22,14 @@ const parsed = z
     SUPABASE_SERVICE_ROLE_KEY: z.string().default(""),
     TRUST_PROXY_HOPS: z.coerce.number().int().min(0).max(5).default(0),
     JOBS_INTERVAL_MS: z.coerce.number().int().min(10000).default(60000),
+    RUN_SCHEDULED_JOBS: z
+      .enum(["true", "false"])
+      .default("true")
+      .transform((value) => value === "true"),
+    SERVE_FRONTEND: z
+      .enum(["true", "false"])
+      .default("false")
+      .transform((value) => value === "true"),
   })
   .safeParse(process.env);
 

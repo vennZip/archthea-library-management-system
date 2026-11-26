@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import { rateLimit } from "express-rate-limit";
+import { existsSync } from "node:fs";
+import { extname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { env, isConfigured } from "./config/env.js";
 import { authClient, serviceClient, userClient } from "./config/supabase.js";
 import { LibraryRepository } from "./repositories/LibraryRepository.js";
@@ -33,7 +36,49 @@ export function createApp(options = {}) {
   );
   app.disable("x-powered-by");
   if (env.TRUST_PROXY_HOPS) app.set("trust proxy", env.TRUST_PROXY_HOPS);
-  app.use(requestId, helmet());
+  const supabaseOrigin = env.SUPABASE_URL
+    ? new URL(env.SUPABASE_URL).origin
+    : null;
+  app.use(
+    requestId,
+    helmet(
+      env.SERVE_FRONTEND
+        ? {
+            contentSecurityPolicy: {
+              directives: {
+                defaultSrc: ["'self'"],
+                scriptSrc: ["'self'"],
+                styleSrc: ["'self'", "'unsafe-inline'"],
+                imgSrc: [
+                  "'self'",
+                  "data:",
+                  "blob:",
+                  ...(supabaseOrigin ? [supabaseOrigin] : []),
+                ],
+                connectSrc: [
+                  "'self'",
+                  ...(supabaseOrigin
+                    ? [
+                        supabaseOrigin,
+                        supabaseOrigin
+                          .replace(/^https:/, "wss:")
+                          .replace(/^http:/, "ws:"),
+                      ]
+                    : []),
+                ],
+                fontSrc: ["'self'", "data:"],
+                objectSrc: ["'none'"],
+                frameAncestors: ["'none'"],
+                baseUri: ["'self'"],
+                formAction: ["'self'"],
+                upgradeInsecureRequests:
+                  env.NODE_ENV === "production" ? [] : null,
+              },
+            },
+          }
+        : {},
+    ),
+  );
   app.use(
     cors({
       origin: (origin, callback) =>
@@ -101,6 +146,40 @@ export function createApp(options = {}) {
       authentication,
     ),
   );
+  if (env.SERVE_FRONTEND) {
+    const directory = fileURLToPath(
+      new URL("../../frontend/dist/", import.meta.url),
+    );
+    const index = join(directory, "index.html");
+    if (!existsSync(index))
+      throw new Error(
+        "The frontend build is missing. Run npm run build:render before starting.",
+      );
+    app.use(
+      express.static(directory, {
+        index: false,
+        dotfiles: "deny",
+        setHeaders(res, path) {
+          res.setHeader(
+            "Cache-Control",
+            /[\\/]assets[\\/]/.test(path)
+              ? "public, max-age=31536000, immutable"
+              : "no-cache",
+          );
+        },
+      }),
+    );
+    app.get(/.*/, (req, res, next) => {
+      if (
+        req.path.startsWith("/api/") ||
+        extname(req.path) ||
+        !req.accepts("html")
+      )
+        return next();
+      res.setHeader("Cache-Control", "no-cache");
+      res.sendFile(index);
+    });
+  }
   app.use((req, res, next) =>
     next(
       new AppError("Endpoint not found.", { status: 404, code: "NOT_FOUND" }),

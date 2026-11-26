@@ -94,6 +94,8 @@ This verifies competing borrowers for one copy, concurrent requests against a st
 
 ## Documentation
 
+For free hosting, the repository includes a Render Blueprint. Follow [Free Render deployment](docs/deployment.md#free-render-deployment), including the separate Supabase Cron setup and hosted Auth redirects. The deployment build does not run application test suites.
+
 - [Architecture and OOP decisions](docs/architecture.md)
 - [Database relationships and workflows](docs/workflows.md)
 - [Generated OpenAPI 3.1 specification](docs/openapi.json)
