@@ -1,0 +1,293 @@
+/* Shared contrast and type scale for task-critical text at every breakpoint. */
+.book-cover.small-cover {
+  width: 31px;
+  min-width: 31px;
+  height: 43px;
+}
+:root {
+  --muted: #5e6b60;
+}
+.breadcrumb,
+.user-profile small,
+.page-heading .eyebrow,
+.catalog-banner .eyebrow,
+.catalog-banner p,
+.results-heading > span,
+.book-category,
+.book-card-info > p,
+.book-card-bottom,
+.app-footer,
+.stat-card > small,
+.stat-top,
+.panel-heading p,
+.cell-detail,
+.table-book small,
+.table-person small,
+.person-button small,
+.field small,
+.form-hint,
+.reservation-preview p,
+.activity-list p,
+.activity-list time,
+.notification-list p,
+.notification-meta,
+.account-profile > p,
+.account-profile dt,
+.account-security p,
+.settings-link p,
+.policy-toggle p,
+.audit-details dt,
+.category-bars > div > div:first-child,
+.inventory-report > div:not(.panel-heading),
+.quick-actions p,
+.eligibility-note span,
+.auth-help p,
+.auth-footer,
+.auth-form-meta,
+.auth-form-wrap > .eyebrow,
+.detail-description,
+.detail-author,
+.book-metadata dt,
+.availability-summary span,
+.detail-actions > span,
+.category-pill,
+.pagination,
+.table-toolbar > span,
+.student-detail-intro p,
+.quick-reservations {
+  color: #5d7055;
+}
+.status {
+  font-size: 12px;
+  color: #536449;
+}
+.status-active,
+.status-available,
+.status-returned,
+.status-completed {
+  color: #44632e;
+}
+.status-waiting,
+.status-borrowed {
+  color: #775e27;
+}
+.status-ready_for_pickup,
+.status-reserved {
+  color: #3f6876;
+}
+.status-overdue,
+.status-inactive,
+.status-restricted,
+.status-damaged,
+.status-lost {
+  color: #974e3d;
+}
+.status-expired,
+.status-cancelled,
+.status-archived,
+.status-maintenance {
+  color: #5a6851;
+}
+.availability-tag {
+  color: #42632e;
+  font-size: 12px;
+}
+.availability-tag.unavailable {
+  color: #795f2e;
+}
+.stat-top,
+.field > span,
+.tab-bar button,
+.sidebar nav a,
+.table-book a,
+.table-person strong,
+.table-title,
+.person-button strong,
+.quick-actions strong,
+.notification-list h3 {
+  font-size: 14px;
+}
+table {
+  font-size: 14px;
+}
+th {
+  font-size: 13px;
+  color: #5d7055;
+}
+.book-card h3 {
+  font-size: 16px;
+}
+.book-card-info > p,
+.book-card-bottom,
+.book-category,
+.stat-card > small,
+.panel-heading p,
+.cell-detail,
+.table-book small,
+.table-person small,
+.person-button small,
+.date-chip,
+.breadcrumb,
+.user-profile small,
+.page-heading .eyebrow,
+.nav-label,
+.pagination,
+.reservation-preview p,
+.activity-list strong,
+.activity-list time,
+.activity-list p,
+.notification-meta,
+.app-footer {
+  font-size: 12px;
+}
+.search-input > input {
+  border: 0;
+  padding: 11px 0;
+  background: transparent;
+}
+.topbar .topbar-search input {
+  border: 0;
+  padding: 8px 0;
+  background: transparent;
+}
+.tab-bar button {
+  color: #60734f;
+}
+.empty-state p {
+  color: #627854;
+}
+.empty-state h3 {
+  color: #415e35;
+}
+.book-cover .cover-author,
+.book-cover .cover-publisher {
+  opacity: 1;
+}
+.landing .hero-copy > p:not(.eyebrow),
+.landing .hero-caption,
+.landing-header nav > a:not(.button),
+.landing .hero-copy .eyebrow,
+.landing-divider,
+.section-intro > p:last-child,
+.experience-grid p,
+.collection-section p:not(.eyebrow),
+.landing-footer p,
+.landing-footer > span,
+.landing .eyebrow,
+.landing-divider p {
+  color: #61754e;
+}
+.hero-copy h1 em,
+.section-intro h2 em,
+.collection-section h2 em {
+  color: #6c7845;
+}
+.auth-help > span,
+.auth-form-wrap > .text-link,
+.auth-form-meta a {
+  color: #536f3e;
+}
+.auth-help p,
+.auth-form-meta,
+.auth-footer,
+.auth-form-wrap > .eyebrow {
+  color: #61734f;
+}
+.connection-notice {
+  color: #596c37;
+}
+.floating-note {
+  color: #586a3d;
+}
+.scene-book-one {
+  background: #865235;
+}
+.scene-book-three {
+  color: #39452d;
+}
+.art-stamp {
+  color: #586b3d;
+}
+.decorative-spine:nth-child(1) {
+  background: #58694a;
+  color: #fff8e4;
+}
+.decorative-spine:nth-child(2) {
+  color: #3e4329;
+}
+.decorative-spine:nth-child(4) {
+  background: #815e41;
+  color: #fff8e4;
+}
+.decorative-spine:nth-child(5) {
+  color: #30452b;
+}
+.landing .collection-section .eyebrow,
+.landing .collection-section p:not(.eyebrow) {
+  color: #53623f;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #657456;
+}
+.auth-form-meta,
+.auth-help > span,
+.auth-form-wrap > .text-link {
+  font-size: 14px;
+}
+.auth-help p,
+.auth-footer {
+  font-size: 12px;
+}
+@media (max-width: 580px) {
+  .compact-loan-table [data-column="borrowed_at"],
+  .compact-loan-table [data-column="status"] {
+    display: none;
+  }
+  .compact-loan-table .table-book {
+    min-width: 0;
+    max-width: none;
+    gap: 9px;
+  }
+  .compact-loan-table td,
+  .compact-loan-table th {
+    padding: 14px;
+  }
+  .compact-loan-table [data-column="book"] {
+    width: 58%;
+  }
+  .compact-loan-table [data-column="due_at"] {
+    width: 42%;
+  }
+  .stat-top {
+    font-size: 13px;
+  }
+  .stat-card > small,
+  .book-card-info > p,
+  .book-card-bottom,
+  .book-category {
+    font-size: 12px;
+  }
+  .book-card h3 {
+    font-size: 15px;
+  }
+  .book-card-cover {
+    padding: 26px 18px 18px;
+  }
+  .availability-tag {
+    font-size: 10px;
+    max-width: calc(100% - 16px);
+  }
+  .page-heading .eyebrow,
+  .nav-label,
+  .breadcrumb,
+  .date-chip,
+  .app-footer {
+    font-size: 12px;
+  }
+  .form-actions .button,
+  .heading-actions .button,
+  .button.small {
+    font-size: 14px;
+  }
+}

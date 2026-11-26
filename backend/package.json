@@ -1,0 +1,23 @@
+{
+  "name": "@archthea/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "jobs": "node src/jobs/run.js",
+    "bootstrap:admin": "node scripts/bootstrap-admin.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.5",
+    "file-type": "^22.3.0",
+    "helmet": "^8.3.0",
+    "multer": "^2.5.0",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  }
+}

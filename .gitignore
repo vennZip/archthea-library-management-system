@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+!.env.*.example
+coverage/
+playwright-report/
+test-results/
+*.log
+.DS_Store
+.supabase/
+.tmp/
+# Local working-session notes; application documentation remains tracked.
+docs/STATUS.md
